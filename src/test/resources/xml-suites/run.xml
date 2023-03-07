@@ -1,4 +1,5 @@
 <suite name="All Test Suite">
+    <parameter name="browserName" value="firefox"></parameter>
     <test verbose="2" preserve-order="true" name="/Users/raramuri/Desktop/Frontend-Assignment/src/test/java/scenarios/FetchProductDetails.java">
         <classes>
             <class name="scenarios.FetchProductDetails">
