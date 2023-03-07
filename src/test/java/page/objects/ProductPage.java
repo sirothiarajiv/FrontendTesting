@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class ProductPage {
     WebDriver driver;
-    ExcelUtilities property = new ExcelUtilities();
+    ExcelUtilities writeDataToExcel = new ExcelUtilities();
     @FindBy(css = "span[class='a-size-medium a-color-base a-text-normal']")
     private List<WebElement> phoneDescription;
     @FindBy(css = "span[class='a-price-whole']")
@@ -24,12 +24,12 @@ public class ProductPage {
     }
     public void fetchPhoneDetails() throws IOException {
         int row = 0;
-        property.writeIntoExcelFile(row, 0,"Phones");
-        property.writeIntoExcelFile(row, 1,"Prices");
+        writeDataToExcel.writeIntoExcelFile(row, 0,"Phones");
+        writeDataToExcel.writeIntoExcelFile(row, 1,"Prices");
         row += 1;
         for(int i=0;i<phoneDescription.size();i++){
-            property.writeIntoExcelFile(row,0,phoneDescription.get(i).getText());
-            property.writeIntoExcelFile(row,1,phonePrice.get(i).getText());
+            writeDataToExcel.writeIntoExcelFile(row,0,phoneDescription.get(i).getText());
+            writeDataToExcel.writeIntoExcelFile(row,1,phonePrice.get(i).getText());
             row += 1;
         }
     }
