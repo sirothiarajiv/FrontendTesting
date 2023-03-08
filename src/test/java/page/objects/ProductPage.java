@@ -22,6 +22,11 @@ public class ProductPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+
+    /**
+     *
+     * @throws IOException
+     */
     public void fetchPhoneDetails() throws IOException {
         int row = 0;
         writeDataToExcel.writeIntoExcelFile(row, 0,"Phones");

@@ -21,6 +21,11 @@ public class TestBase {
     ExtentSparkReporter spark = new ExtentSparkReporter("target/spark.html");
     public static WebDriver driver = null;
 
+    /**
+     *
+     * @param browserName
+     * @throws IOException
+     */
     @Parameters({"browserName"})
     @BeforeClass
     public void openBrowser(@Optional String browserName)

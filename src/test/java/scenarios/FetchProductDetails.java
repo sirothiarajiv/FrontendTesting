@@ -13,6 +13,11 @@ import java.io.IOException;
  * author : Rajiv Sirothia
  */
 public class FetchProductDetails extends TestBase {
+
+    /**
+     *
+     * @throws IOException
+     */
     @Test
     public void getPhoneInfo() throws IOException {
         ExtentTest test = extent

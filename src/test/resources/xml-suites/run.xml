@@ -1,10 +1,15 @@
 <suite name="All Test Suite">
-    <parameter name="browserName" value="firefox"></parameter>
+    <parameter name="browserName" value="chrome"></parameter>
     <test verbose="2" preserve-order="true" name="/Users/raramuri/Desktop/Frontend-Assignment/src/test/java/scenarios/FetchProductDetails.java">
         <classes>
             <class name="scenarios.FetchProductDetails">
                 <methods>
                     <include name="getPhoneInfo"/>
+                </methods>
+            </class>
+            <class name="scenarios.PurchaseIphone">
+                <methods>
+                    <include name="loginAndSearchIPhone"/>
                 </methods>
             </class>
         </classes>
